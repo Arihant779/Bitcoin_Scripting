@@ -245,6 +245,8 @@ def sign_send_and_verify_legacy(rpc_connection, raw_tx):
             print("Legacy transaction signing failed.\n")
             return None
         signed_hex = signed_tx['hex']
+        # Print the signed transaction hex for legacy transaction
+        print("Signed transaction hex:", signed_hex, "\n")
         txid = rpc_connection.sendrawtransaction(signed_hex)
         print(f"Legacy transaction broadcasted with TXID: {txid}\n")
         decoded = decode_raw_transaction(rpc_connection, signed_hex)
@@ -265,6 +267,8 @@ def sign_send_and_verify_segwit(rpc_connection, raw_tx):
             print("Segwit transaction signing failed.\n")
             return None
         signed_hex = signed_tx['hex']
+        # Print the signed transaction hex for segwit transaction
+        print("Signed transaction hex:", signed_hex, "\n")
         txid = rpc_connection.sendrawtransaction(signed_hex)
         print(f"Segwit transaction broadcasted with TXID: {txid}\n")
         decoded = decode_raw_transaction(rpc_connection, signed_hex)
