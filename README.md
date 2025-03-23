@@ -22,6 +22,7 @@ cd <repository_name>
 
 # 5. Run the Application
 python overall.py
+```
 
 
 ## 🔗 Authors
